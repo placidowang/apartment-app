@@ -1,0 +1,21 @@
+<h2>Edit Apartment</h2>
+
+<form action="/apartments/<%=@apartment.id%>" method="post">
+<input type="hidden" name="_method" value="patch"/>
+
+<label>Address:</label>
+<input type="text" name="address" value="<%=@apartment.address%>"/>
+
+<input type="submit"/>
+</form>
+
+
+
+
+
+<form action="/apartments/<%= @apartment.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete Apartment"/>
+</form>
+
+<a class="button" href="/">Home</a>

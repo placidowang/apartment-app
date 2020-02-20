@@ -1,4 +1,13 @@
-<h1>Apartmet app</h1>
+<h2>Apartments:</h2>
 
-<a class="button" href="/tenants">All Tenants</a>
+<ul>
+<% @apartments.each do |apartment| %>
+  <a href="/apartments/<%=apartment.id%>">
+    <li><%= apartment.address %></li>
+  </a>
+<% end %>
+</ul>
 
+<button>
+    <a href="/tenants"> All Tenants </a>
+</button>
