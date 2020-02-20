@@ -7,8 +7,6 @@ class TenantsController < ApplicationController
     erb :index
   end
 
-  # You should be able to associate an apartment
-  # when creating a new tenant
   get "/tenants/new" do
     @apartments = Apartment.all
     erb :new
@@ -19,8 +17,6 @@ class TenantsController < ApplicationController
     erb :show
   end
 
-  # You should be able to associate an apartment
-  # when editing a tenant
   get "/tenants/:id/edit" do
     @tenant = current_tenant
     @apartments = Apartment.all

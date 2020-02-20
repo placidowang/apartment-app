@@ -23,14 +23,6 @@ class ApartmentsController < ApplicationController
     erb :edit
   end
 
-  # post "/apartments/:id" do
-    
-  # end
-
-
-
-
-
   post "/apartments" do
     a = Apartment.create(params)
     redirect "/apartments/#{a.id}"
@@ -40,7 +32,6 @@ class ApartmentsController < ApplicationController
     current_apartment.destroy
     redirect "/apartments"
   end
-
 
   patch "/apartments/:id" do
     # author = Author.find(params[:id])
